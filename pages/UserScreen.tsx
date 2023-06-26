@@ -12,26 +12,31 @@ import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import LoginComponent from "../components/LoginComponent";
 import pb from "../config/PocketBase";
-import { clearToken } from "../redux/authenticate/authReducer";
+import { logout } from "../redux/authenticate/authReducer";
+import useAuthStore from "../store/auth/authStore";
 
 const UserScreen = () => {
   const navigation = useNavigation()
-  const [isSwitchNotification, setIsSwitchNotification] = React.useState(false)
-  const [isSwitchOnEarth, setIsSwitchOnEarth] = React.useState(false)
-  const location = useSelector((state) => state.location)
+  const [isSwitchNotification, setIsSwitchNotification] = useState(false)
+  const [isSwitchOnEarth, setIsSwitchOnEarth] = useState(false)
+  // const location = useSelector((state) => state.location)
   const [isValid,setIsValid] = useState(false)
-  const dispatch = useDispatch();
-  function logout() {
-    dispatch(clearToken())
+  const userStore = useAuthStore()
+  const token = userStore.token;
+  function logoutUser() {
+    userStore.logout()
   }
   useEffect(() => {
-    const token = useSelector((state) => state.auth)
-    console.log(token)
-    if(location.latitude != null && location.longitude != null){
-      setIsSwitchOnEarth(true)
-    }
    
-  }, [location]);
+    // if(location.latitude != null && location.longitude != null){
+    //   setIsSwitchOnEarth(true)
+    // }
+    if(token !== null){
+      setIsValid(true)
+    }else{
+      setIsValid(false)
+    }
+  }, [token]);
   
   const onToggleSwitchNotification = () =>
     setIsSwitchNotification(!isSwitchNotification)
@@ -102,7 +107,7 @@ const UserScreen = () => {
           <View className="mt-48 flex justify-center items-center">
             <Text>BeautyBooking 2022 - Version 1.1.1(1)</Text>
             <View className=" flex-row justify-between items-center  px-4 py-4 bg-white rounded-2xl w-full mt-4">
-            <TouchableOpacity onPress={() => logout()}>
+            <TouchableOpacity onPress={() => logoutUser()}>
               <View className="flex-row items-center space-x-4">
                   <Ionicons name="log-out" size={24} color="red" />
                   <Text className="text-red-500">Đăng xuất</Text>

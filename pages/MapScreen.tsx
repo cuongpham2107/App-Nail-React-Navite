@@ -7,9 +7,12 @@ import { useNavigation } from '@react-navigation/native';
 import * as Location from 'expo-location';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLocation,setLocationError } from '../redux/location/locationReducer';
+import { RootStackParamList } from '../App';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
+export type MapNavigationProp = NativeStackNavigationProp<RootStackParamList,"Map">
 const MapScreen = () => {
-    const navigation  = useNavigation()
+    const navigation  = useNavigation<MapNavigationProp>()
     
     const dispatch = useDispatch()
     useEffect(() => {

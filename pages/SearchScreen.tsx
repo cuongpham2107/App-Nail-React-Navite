@@ -1,11 +1,11 @@
 import { View, Text, SafeAreaView, TouchableOpacity,Image, TextInput } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 
 const SearchScreen = () => {
   const navigation = useNavigation();
-  const [text, setText] = React.useState("");
+  const [text, setText] = useState("");
 
   return (
     <SafeAreaView className="mx-4 flex-1">

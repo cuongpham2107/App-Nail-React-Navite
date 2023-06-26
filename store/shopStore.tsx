@@ -1,0 +1,18 @@
+export type typeShop = {
+    id: string,
+      name :string | null,
+      address:string | null,
+      rating: Number | null,
+      count_rating:Number | null,
+      imgUrl:string | null,
+      service:string | null,
+      description:string | null,
+      body:string | null,
+      category_id:string | null,
+      phone:string | null,
+      status:string | null,
+      time_start:Date | null,
+      time_end:Date | null,
+      long:Number | null,
+      lat:Number | null,
+}

@@ -14,11 +14,26 @@ import SearchScreen from './pages/SearchScreen';
 import MapScreen from './pages/MapScreen';
 import store from './redux/store';
 import ShopDetailScreen from './pages/ShopDetailScreen';
-import LoginScreen from './pages/LoginScreen';
+import { ShopModel } from './models';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  HomeScreen: undefined;
+  EditAccount: undefined;
+  BookingDetail: undefined;
+  ShopDetail: ShopModel;
+  About: undefined;
+  Search: undefined;
+  Map: undefined;
+}
+export type TabStackParamList = {
+  Home: undefined;
+  Schedule: undefined;
+  User: undefined;
+}
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<TabStackParamList>();
+
 function Tabs () {
   return (
      <Tab.Navigator 
@@ -52,8 +67,7 @@ function Tabs () {
 function Main() {
   return (
     <Stack.Navigator>
-
-       <Stack.Screen name="HomeScreen" component={Tabs}   options={{ headerShown: false }}/>
+       <Stack.Screen name="HomeScreen" component={Tabs} options={{ headerShown: false }}/>
        <Stack.Screen name="EditAccount" component={EditAccountSrceen} options={{ headerShown: false }}/>
        <Stack.Screen name="BookingDetail" component={BookingDetailScreen} options={{ headerShown: false }}/>
        <Stack.Screen name="ShopDetail" component={ShopDetailScreen} options={{ headerShown: false }}/>
@@ -69,8 +83,6 @@ function Main() {
           name='Map' 
           component={MapScreen}
           options={{presentation: "fullScreenModal", headerShown: false}} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }}/>
-
     </Stack.Navigator>
   );
 }

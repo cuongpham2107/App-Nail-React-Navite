@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "1b973c2e-da84-4ef5-be3c-fade4be53a37",
+    "colId": "history",
+    "containerId": "",
+    "name": "\"http://127.0.0.1:8090/api/collections/shops/records?expand=services",
+    "url": "\"http://127.0.0.1:8090/api/collections/shops/records?expand=services",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T01:58:12.795Z",
+    "modified": "2023-06-15T01:58:12.795Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "expand",
+        "value": "services",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "f21f5ecc-fed1-4cd3-8a1d-cb6d2dd8a909",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8090/api/collections/shops/records?expand=services",
+    "url": "http://127.0.0.1:8090/api/collections/shops/records?expand=services",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T01:58:16.557Z",
+    "modified": "2023-06-15T01:58:16.557Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "expand",
+        "value": "services",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "26af39ce-0c60-4ffa-ae53-51eba88c02ee",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8090/api/collections/shops/records",
+    "url": "http://127.0.0.1:8090/api/collections/shops/records",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T01:58:28.142Z",
+    "modified": "2023-06-15T01:58:28.142Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "90b30e9e-e86f-43c1-aa23-50e4ad260f1a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8090/api/collections/shops/records?expand=service",
+    "url": "http://127.0.0.1:8090/api/collections/shops/records?expand=service",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T01:58:43.030Z",
+    "modified": "2023-06-15T01:58:43.030Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "expand",
+        "value": "service",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "613be67e-171e-40bd-9854-bfa8db649b41",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8090/api/collections/shops/records?expand=services(shop).service_category",
+    "url": "http://127.0.0.1:8090/api/collections/shops/records?expand=services(shop).service_category",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T02:01:07.463Z",
+    "modified": "2023-06-15T02:01:07.463Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "expand",
+        "value": "services(shop).service_category",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "6916b57e-7741-4319-9d1a-0b9df91589c2",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8090/api/collections/shops/records?expands=services(shop).service_category",
+    "url": "http://127.0.0.1:8090/api/collections/shops/records?expands=services(shop).service_category",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-06-15T02:01:45.717Z",
+    "modified": "2023-06-15T02:01:45.717Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "expands",
+        "value": "services(shop).service_category",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]

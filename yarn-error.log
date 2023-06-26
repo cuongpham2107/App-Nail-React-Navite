@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/bin/node /Users/phamcuong/Library/Caches/fnm_multishells/64989_1686052417522/bin/yarn add expo-lacation
+  /Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/bin/node /Users/phamcuong/Library/Caches/fnm_multishells/22120_1686716541698/bin/yarn add zustand
 
 PATH: 
-  /opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/usr/local/mongodb/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/Users/phamcuong/Library/Caches/fnm_multishells/64989_1686052417522/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/usr/local/mongodb/bin:/Users/phamcuong/Library/Caches/fnm_multishells/64857_1686052411928/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Docker.app/Contents/Resources/bin/://flutter/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Docker.app/Contents/Resources/bin/:/Users/phamcuong/React-Native/deliveroo-app/flutter/bin
+  /opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/usr/local/mongodb/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/Users/phamcuong/Library/Caches/fnm_multishells/22120_1686716541698/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/usr/local/mongodb/bin:/Users/phamcuong/Library/Caches/fnm_multishells/51850_1686656545945/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Docker.app/Contents/Resources/bin/://flutter/bin:/Users/phamcuong/.dotnet/tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Docker.app/Contents/Resources/bin/:/Users/phamcuong/React-Native/Nail/flutter/bin:/Users/phamcuong/.dotnet/tools
 
 Yarn version: 
   1.22.19
@@ -14,17 +14,10 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/expo-lacation: Not found
-      at Request.params.callback [as _callback] (/Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/lib/node_modules/yarn/lib/cli.js:66145:18)
-      at Request.self.callback (/Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/lib/node_modules/yarn/lib/cli.js:140890:22)
-      at Request.emit (node:events:513:28)
-      at Request.<anonymous> (/Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/lib/node_modules/yarn/lib/cli.js:141862:10)
-      at Request.emit (node:events:513:28)
-      at IncomingMessage.<anonymous> (/Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/lib/node_modules/yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:627:28)
-      at IncomingMessage.emit (node:events:525:35)
-      at endReadableNT (node:internal/streams/readable:1358:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: https://registry.yarnpkg.com/zustand: ETIMEDOUT
+      at Timeout._onTimeout (/Users/phamcuong/Library/Application Support/fnm/node-versions/v16.19.1/installation/lib/node_modules/yarn/lib/cli.js:141550:19)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
 
 npm manifest: 
   {
@@ -41,12 +34,14 @@ npm manifest:
       "@react-navigation/bottom-tabs": "^6.5.7",
       "@react-navigation/native": "^6.1.6",
       "@react-navigation/native-stack": "^6.9.12",
+      "@reduxjs/toolkit": "^1.9.5",
       "@types/react": "~18.0.27",
       "axios": "^1.4.0",
       "expo": "~48.0.6",
       "expo-location": "~15.1.1",
       "expo-status-bar": "~1.4.4",
       "nativewind": "^2.0.11",
+      "pocketbase": "^0.15.2",
       "react": "18.2.0",
       "react-native": "0.71.3",
       "react-native-loading-spinner-overlay": "^3.0.1",
@@ -1899,6 +1894,16 @@ Lockfile:
     "version" "6.1.8"
     dependencies:
       "nanoid" "^3.1.23"
+  
+  "@reduxjs/toolkit@^1.9.5":
+    "integrity" "sha512-Rt97jHmfTeaxL4swLRNPD/zV4OxTes4la07Xc4hetpUW/vc75t5m1ANyxG6ymnEQ2FsLQsoMlYB2vV1sO3m8tQ=="
+    "resolved" "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.9.5.tgz"
+    "version" "1.9.5"
+    dependencies:
+      "immer" "^9.0.21"
+      "redux" "^4.2.1"
+      "redux-thunk" "^2.4.2"
+      "reselect" "^4.1.8"
   
   "@segment/loosely-validate-event@^2.0.0":
     "integrity" "sha512-ZMCSfztDBqwotkl848ODgVcAmN4OItEWDCkshcKz0/W6gGSQayuuCtWV/MlodFivAZD793d6UgANd6wCXUfrIw=="
@@ -4041,6 +4046,11 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/image-size/-/image-size-0.6.3.tgz"
     "version" "0.6.3"
   
+  "immer@^9.0.21":
+    "integrity" "sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA=="
+    "resolved" "https://registry.npmjs.org/immer/-/immer-9.0.21.tgz"
+    "version" "9.0.21"
+  
   "import-fresh@^2.0.0":
     "integrity" "sha512-eZ5H8rcgYazHbKC3PG4ClHNykCSxtAhxSSEM+2mb+7evD2CKF5V7c0dNum7AdpDh0ZdICwZY9sRSn8f+KH96sg=="
     "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-2.0.0.tgz"
@@ -5810,6 +5820,11 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/pngjs/-/pngjs-3.4.0.tgz"
     "version" "3.4.0"
   
+  "pocketbase@^0.15.2":
+    "integrity" "sha512-dGSwO2j3XqtFMANNNEVh/moRw0ItOraKC1p3J+I0y/tPEfgleCAUptMWhqHrFNS+jM5r21eSS1U48N9/OmHFzA=="
+    "resolved" "https://registry.npmjs.org/pocketbase/-/pocketbase-0.15.2.tgz"
+    "version" "0.15.2"
+  
   "posix-character-classes@^0.1.0":
     "integrity" "sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg=="
     "resolved" "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
@@ -6181,7 +6196,7 @@ Lockfile:
       "whatwg-fetch" "^3.0.0"
       "ws" "^6.2.2"
   
-  "react-redux@^8.0.5":
+  "react-redux@^7.2.1 || ^8.0.2", "react-redux@^8.0.5":
     "integrity" "sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw=="
     "resolved" "https://registry.npmjs.org/react-redux/-/react-redux-8.0.5.tgz"
     "version" "8.0.5"
@@ -6206,7 +6221,7 @@ Lockfile:
       "object-assign" "^4.1.1"
       "react-is" "^16.12.0 || ^17.0.0 || ^18.0.0"
   
-  "react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@>= 17.0.1", "react@>=16.3.0", "react@>=17.0.0", "react@18.2.0":
+  "react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@>= 17.0.1", "react@>=16.3.0", "react@>=17.0.0", "react@18.2.0":
     "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
     "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
     "version" "18.2.0"
@@ -6371,10 +6386,10 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
     "version" "1.0.0"
   
-  "reselect@^4.0.0":
-    "integrity" "sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A=="
-    "resolved" "https://registry.npmjs.org/reselect/-/reselect-4.1.7.tgz"
-    "version" "4.1.7"
+  "reselect@^4.0.0", "reselect@^4.1.8":
+    "integrity" "sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ=="
+    "resolved" "https://registry.npmjs.org/reselect/-/reselect-4.1.8.tgz"
+    "version" "4.1.8"
   
   "resolve-from@^3.0.0":
     "integrity" "sha512-GnlH6vxLymXJNMBo7XP1fJIzBFbdYt49CuTwmB/6N53t+kMPRMFKz783LlQ4tv28XoQfMWinAJX6WCGf2IlaIw=="

@@ -9,27 +9,28 @@ import {
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
-import pb from "../config/PocketBase"
-import { setToken } from "../redux/authenticate/authReducer";
+import pb from "../config/PocketBase";
+import { login } from "../redux/authenticate/authReducer";
+import useAuthStore from "../store/auth/authStore";
 
 const LoginComponent = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const dispatch = useDispatch();
-  const  authentication = async () => {
-        if(email !== null && password !== null){
-            const authData = await pb.collection('users').authWithPassword(
-                email,
-                password,
-            );
-            dispatch(setToken(authData.token));
-        }
-        else{
-            console.log(email,password)
-        }
-    
+  // const dispatch = useDispatch();
+  const userStore = useAuthStore()
+  const authentication = async () => {
+    if (email !== null && password !== null) {
+      const authData : any = await pb
+        .collection("users")
+        .authWithPassword(email, password);
+        userStore.login(authData.record, authData.token)
+      // dispatch(login(authData));
+    } else {
+      console.log(email, password);
     }
+  };
+  
   return (
     <SafeAreaView>
       <View className="mx-4">
@@ -45,7 +46,7 @@ const LoginComponent = () => {
               onChangeText={setEmail}
               value={email}
               placeholder="Tên đăng nhập"
-              className="p-4 bg-white mt-2 rounded-lg text-base border-[0.5px] border-gray-400"
+              className="p-4 bg-white mt-2 rounded-lg text-base border-[0.5px] border-gray-400" 
             />
           </View>
           <View>
